@@ -331,7 +331,7 @@ section {
 .slideshow {
     position: relative;
     overflow: hidden;
-    min-height: 620px;
+    min-height: 480px;
     border: 10px solid rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     background:
@@ -517,7 +517,7 @@ footer {
     }
 
     .slideshow {
-        min-height: 500px;
+        min-height: 400px;
     }
 }
 
@@ -548,7 +548,7 @@ footer {
     }
 
     .slideshow {
-        min-height: 420px;
+        min-height: 360px;
     }
 
     .slide-caption {
