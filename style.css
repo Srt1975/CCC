@@ -361,6 +361,7 @@ section {
 }
 
 .slide-caption {
+    visibility: hidden;
     position: absolute;
     left: 18px;
     right: 18px;
