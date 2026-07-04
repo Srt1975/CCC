@@ -260,6 +260,7 @@
         const nextButton = document.querySelector("#nextSlide");
         let currentSlide = 0;
 
+        // --- Slide Logic Functions ---
         function showSlide(index) {
             currentSlide = (index + slides.length) % slides.length;
 
@@ -273,6 +274,7 @@
             });
         }
 
+        // --- Dot Initialization (Kept the same) ---
         slides.forEach((slide, index) => {
             const dot = document.createElement("button");
             dot.className = "dot";
@@ -282,9 +284,25 @@
             dotsContainer.appendChild(dot);
         });
 
+        // --- Event Listeners (Kept the same for manual control) ---
         previousButton.addEventListener("click", () => showSlide(currentSlide - 1));
         nextButton.addEventListener("click", () => showSlide(currentSlide + 1));
 
+
+        // ======================================================
+        // ⭐ NEW AUTO-RUN LOGIC START ⭐
+        // ======================================================
+
+        const autoPlayIntervalTime = 3000; // Time in milliseconds (e.g., 3000ms = 3 seconds)
+
+        let slideTimer = setInterval(() => {
+            // Advance the slide automatically
+            showSlide(currentSlide + 1);
+        }, autoPlayIntervalTime);
+
+
+        // --- Initial Call ---
+        // Show the first slide when the page loads
         showSlide(0);
     </script>
 </body>
